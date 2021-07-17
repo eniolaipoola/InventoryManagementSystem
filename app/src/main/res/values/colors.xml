@@ -8,4 +8,8 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="blue">#0336ff</color>
+    <color name="color_deep_blue">#090E33</color>
+    <color name="line_colour_2">#3D4B65</color>
+    <color name="line_colour">#546481</color>
+    <color name="product_details_grey">#666666</color>
 </resources>

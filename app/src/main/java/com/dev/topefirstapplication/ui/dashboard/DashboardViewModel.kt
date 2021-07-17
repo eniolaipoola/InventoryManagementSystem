@@ -10,4 +10,9 @@ class DashboardViewModel : ViewModel() {
         value = "This is dashboard Fragment"
     }
     val text: LiveData<String> = _text
+
+    //create a function that fetched all items in my product table
+    fun fetchAllProducts(){
+
+    }
 }

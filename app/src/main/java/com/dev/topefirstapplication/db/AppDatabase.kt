@@ -8,8 +8,9 @@ import androidx.room.Room
 import androidx.room.RoomDatabase
 import androidx.room.TypeConverters
 import com.dev.topefirstapplication.db.converter.Converter
+import com.dev.topefirstapplication.ui.dashboard.ProductModel
 
-@Database(entities = [], version = 1, exportSchema = false)
+@Database(entities = [ProductModel::class], version = 1, exportSchema = false)
 @TypeConverters(Converter::class)
 abstract class AppDatabase : RoomDatabase() {
     private val mIsDatabaseCreated = MutableLiveData<Boolean>()
@@ -31,6 +32,8 @@ abstract class AppDatabase : RoomDatabase() {
         private val LOCK = Any()
         private const val DATABASE_NAME = "inventory_management"
         private var mInstance: AppDatabase? = null
+
+
         fun getInstance(context: Context): AppDatabase? {
             if (mInstance == null) {
                 synchronized(LOCK) {

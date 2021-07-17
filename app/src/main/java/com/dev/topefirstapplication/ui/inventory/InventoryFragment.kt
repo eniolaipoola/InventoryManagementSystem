@@ -12,18 +12,18 @@ import com.dev.topefirstapplication.R
 
 class InventoryFragment : Fragment() {
 
-    private lateinit var homeViewModel: HomeViewModel
+    private lateinit var inventoryViewModel: InventoryViewModel
 
     override fun onCreateView(
             inflater: LayoutInflater,
             container: ViewGroup?,
             savedInstanceState: Bundle?,
     ): View? {
-        homeViewModel =
-                ViewModelProvider(this).get(HomeViewModel::class.java)
+        inventoryViewModel =
+                ViewModelProvider(this).get(InventoryViewModel::class.java)
         val root = inflater.inflate(R.layout.fragment_home, container, false)
         val textView: TextView = root.findViewById(R.id.text_home)
-        homeViewModel.text.observe(viewLifecycleOwner, Observer {
+        inventoryViewModel.text.observe(viewLifecycleOwner, Observer {
             textView.text = it
         })
         return root

@@ -12,18 +12,18 @@ import com.dev.topefirstapplication.R
 
 class CategoryFragment : Fragment() {
 
-    private lateinit var notificationsViewModel: NotificationsViewModel
+    private lateinit var categoryViewModel: CategoryViewModel
 
     override fun onCreateView(
             inflater: LayoutInflater,
             container: ViewGroup?,
             savedInstanceState: Bundle?,
     ): View? {
-        notificationsViewModel =
-                ViewModelProvider(this).get(NotificationsViewModel::class.java)
+        categoryViewModel =
+                ViewModelProvider(this).get(CategoryViewModel::class.java)
         val root = inflater.inflate(R.layout.fragment_notifications, container, false)
         val textView: TextView = root.findViewById(R.id.text_notifications)
-        notificationsViewModel.text.observe(viewLifecycleOwner, Observer {
+        categoryViewModel.text.observe(viewLifecycleOwner, Observer {
             textView.text = it
         })
         return root

@@ -7,4 +7,12 @@
     <string name="title_dashboard">Dashboard</string>
     <string name="title_settings">Settings</string>
     <string name="title_category">Category</string>
+    <string name="number_of_item"># of items in store</string>
+    <string name="item_value">22,346</string>
+    <string name="item_text">Items</string>
+    <string name="store_items_text">Store Items</string>
+    <string name="product_name">Mamadol Oil</string>
+    <string name="product_prize">#1500.00</string>
+    <string name="product_date">12th of March 2020</string>
+    <string name="product_barcode_text">CE7634</string>
 </resources>
