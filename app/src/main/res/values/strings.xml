@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">TopeFirstApplication</string>
+    <string name="inventory_system_text">Inventory made Simple</string>
+    <string name="standard_package_description">Get started with standard package for free</string>
+    <string name="title_activity_dashboard">MainActivity</string>
+    <string name="title_inventory">Inventory</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_settings">Settings</string>
+    <string name="title_category">Category</string>
+</resources>
