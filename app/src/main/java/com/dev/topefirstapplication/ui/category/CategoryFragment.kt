@@ -21,7 +21,7 @@ class CategoryFragment : Fragment() {
     ): View? {
         categoryViewModel =
                 ViewModelProvider(this).get(CategoryViewModel::class.java)
-        val root = inflater.inflate(R.layout.fragment_notifications, container, false)
+        val root = inflater.inflate(R.layout.fragment_category, container, false)
         val textView: TextView = root.findViewById(R.id.text_notifications)
         categoryViewModel.text.observe(viewLifecycleOwner, Observer {
             textView.text = it

@@ -1,15 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="color_primary">#2A45F0</color>
+    <color name="colorPrimary">#E5E5E5</color>
     <color name="color_secondary">#2A76F0</color>
     <color name="purple_700">#FF3700B3</color>
     <color name="teal_200">#FF03DAC5</color>
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="off_white">#80FFFFFF</color>
     <color name="blue">#0336ff</color>
     <color name="color_deep_blue">#090E33</color>
     <color name="line_colour_2">#3D4B65</color>
     <color name="line_colour">#546481</color>
     <color name="product_details_grey">#666666</color>
+    <color name="home_username_text_color">#3F3E3E</color>
+    <color name="colorEditTextInput">#9A9A9A</color>
+    <color name="account_details_color">#E5000000</color>
+    <color name="settings_page_color">#1E1E1E</color>
+    <color name="home_page_card">#F6F6FB</color>
+    <color name="line_break_color">#C1C1C1</color>
 </resources>

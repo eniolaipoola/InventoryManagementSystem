@@ -20,5 +20,5 @@ data class ProductModel(
     var amount: Double,
     var created_at: String,
     var updated_at: String,
-    var updated_by: String,
+    var updated_by: Int,
 )

@@ -12,7 +12,8 @@
         android:id="@+id/top_part"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        app:layout_constraintHeight_percent="0.3"
+        android:background="@color/off_white"
+        app:layout_constraintHeight_percent="0.25"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent">
@@ -22,7 +23,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="32dp"
-            android:layout_marginTop="60dp"
+            android:layout_marginTop="32dp"
             android:layout_marginEnd="8dp"
             android:textSize="20dp"
             android:gravity="center_vertical"
@@ -124,6 +125,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             android:layout_marginTop="8dp"
+            android:overScrollMode="never"
             tools:listitem="@layout/item_store_product_list"
             android:layout_height="0dp">
 

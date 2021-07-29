@@ -21,7 +21,7 @@ class InventoryFragment : Fragment() {
     ): View? {
         inventoryViewModel =
                 ViewModelProvider(this).get(InventoryViewModel::class.java)
-        val root = inflater.inflate(R.layout.fragment_home, container, false)
+        val root = inflater.inflate(R.layout.fragment_inventory, container, false)
         val textView: TextView = root.findViewById(R.id.text_home)
         inventoryViewModel.text.observe(viewLifecycleOwner, Observer {
             textView.text = it

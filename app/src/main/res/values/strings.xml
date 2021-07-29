@@ -15,4 +15,10 @@
     <string name="product_prize">#1500.00</string>
     <string name="product_date">12th of March 2020</string>
     <string name="product_barcode_text">CE7634</string>
+    <string name="update_profile">Update Profile</string>
+    <string name="phone_number">+2345555555</string>
+    <string name="email">admin@inventory.com</string>
+    <string name="full_name">Admin admin</string>
+    <string name="contact_information">Contact Information</string>
+    <string name="admin_details">Admin Details</string>
 </resources>
