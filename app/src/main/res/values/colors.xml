@@ -20,4 +20,6 @@
     <color name="settings_page_color">#1E1E1E</color>
     <color name="home_page_card">#F6F6FB</color>
     <color name="line_break_color">#C1C1C1</color>
+    <color name="no_enrollment_button_colour">#656565</color>
+    <color name="add_lesson_text_colour">#FF0000</color>
 </resources>

@@ -7,7 +7,7 @@ import androidx.lifecycle.ViewModel
 class InventoryViewModel : ViewModel() {
 
     private val _text = MutableLiveData<String>().apply {
-        value = "This is home Fragment"
+        value = "Put selected items here and calculate total price"
     }
     val text: LiveData<String> = _text
 }

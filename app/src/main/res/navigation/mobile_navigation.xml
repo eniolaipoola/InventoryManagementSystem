@@ -9,7 +9,12 @@
         android:id="@+id/navigation_dashboard"
         android:name="com.dev.topefirstapplication.ui.dashboard.DashboardFragment"
         android:label="@string/title_dashboard"
-        tools:layout="@layout/fragment_dashboard" />
+        tools:layout="@layout/fragment_dashboard"
+        app:startDestination="@id/action_navigation_dashboard_to_createProductDialogFragment">
+        <action
+            android:id="@+id/action_navigation_dashboard_to_createProductDialogFragment"
+            app:destination="@id/createProductDialogFragment" />
+    </fragment>
 
     <fragment
         android:id="@+id/navigation_inventory"
@@ -28,5 +33,10 @@
         android:name="com.dev.topefirstapplication.ui.settings.SettingsFragment"
         android:label="@string/title_settings"
         tools:layout="@layout/fragment_settings" />
+
+    <fragment
+        android:id="@+id/createProductDialogFragment"
+        android:name="com.dev.topefirstapplication.ui.dashboard.CreateProductDialogFragment"
+        android:label="CreateProductDialogFragment" />
 
 </navigation>

@@ -23,4 +23,19 @@
     <string name="admin_details">Admin Details</string>
     <string name="number_of_item_in_category"># of items in Category</string>
     <string name="add_item">Add New Item</string>
+    <string name="add_product">Add new store product</string>
+    <string name="cancel">Cancel</string>
+    <string name="add_products">Add Product</string>
+    <string name="product_title">Enter Product Name</string>
+    <string name="product_price_text">Enter Product Price</string>
+    <string name="product_barcode">Enter Product Barcode</string>
+
+    <string-array name="product_category">
+        <item>Select Category</item>
+        <item>Provisions</item>
+        <item>Toiletries</item>
+        <item>Drinks</item>
+        <item>Clothing Item</item>
+    </string-array>
+
 </resources>

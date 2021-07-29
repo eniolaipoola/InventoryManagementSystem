@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import androidx.fragment.app.DialogFragment
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
@@ -32,7 +33,10 @@ class DashboardFragment : Fragment(), ProductAdapter.OnProductSelectedListener {
 
         val fab: FloatingActionButton = root.findViewById(R.id.create_item_fab)
         fab.setOnClickListener {
-            findNavController().navigate(R.id.navigation_category)
+            val dialogFragment: DialogFragment =
+                CreateProductDialogFragment()
+            //dialogFragment.arguments = bundle
+            activity?.supportFragmentManager?.let { it1 -> dialogFragment.show(it1, "addProductDialog") }
         }
 
         dashboardViewModel.allData.observe(viewLifecycleOwner, Observer {
@@ -43,6 +47,8 @@ class DashboardFragment : Fragment(), ProductAdapter.OnProductSelectedListener {
                     requireActivity().applicationContext,
                     LinearLayoutManager.VERTICAL, false
             )
+            val categoryValue: TextView = root.findViewById(R.id.number_of_items_value)
+            categoryValue.text = it.size.toString()
             //populate data
             val productRecyclerView: RecyclerView = root.findViewById(R.id.items_recycler_view)
             productRecyclerView.adapter = productAdapter
