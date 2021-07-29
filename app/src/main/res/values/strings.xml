@@ -21,4 +21,6 @@
     <string name="full_name">Admin admin</string>
     <string name="contact_information">Contact Information</string>
     <string name="admin_details">Admin Details</string>
+    <string name="number_of_item_in_category"># of items in Category</string>
+    <string name="add_item">Add New Item</string>
 </resources>

@@ -52,7 +52,7 @@ class DashboardFragment : Fragment(), ProductAdapter.OnProductSelectedListener {
         val categoryText: TextView = root.findViewById(R.id.category_text)
         categoryText.setOnClickListener {
             //navigate to category page
-
+            findNavController().navigate(R.id.navigation_category)
         }
 
         return root

@@ -8,11 +8,16 @@ import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import androidx.recyclerview.widget.GridLayoutManager
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.dev.topefirstapplication.R
 
-class CategoryFragment : Fragment() {
+class CategoryFragment : Fragment(), CategoryAdapter.OnCategorySelectedListener {
 
     private lateinit var categoryViewModel: CategoryViewModel
+    private lateinit var layoutManager: GridLayoutManager
+    lateinit var categoryAdapter: CategoryAdapter
 
     override fun onCreateView(
             inflater: LayoutInflater,
@@ -22,10 +27,26 @@ class CategoryFragment : Fragment() {
         categoryViewModel =
                 ViewModelProvider(this).get(CategoryViewModel::class.java)
         val root = inflater.inflate(R.layout.fragment_category, container, false)
-        val textView: TextView = root.findViewById(R.id.text_notifications)
-        categoryViewModel.text.observe(viewLifecycleOwner, Observer {
-            textView.text = it
+
+        categoryViewModel.categoryData.observe(viewLifecycleOwner, Observer {
+            //insert all category into database
+            categoryAdapter = CategoryAdapter(this)
+            categoryAdapter.setProductItem(it)
+            layoutManager = GridLayoutManager(
+                requireActivity().applicationContext, 3,
+                LinearLayoutManager.VERTICAL, false
+            )
+
+            val categoryValue: TextView = root.findViewById(R.id.number_of_items_value)
+            categoryValue.text = it.size.toString()
+            //populate data
+            val categoryRecyclerView: RecyclerView = root.findViewById(R.id.category_recycler_view)
+            categoryRecyclerView.adapter = categoryAdapter
+            categoryRecyclerView.layoutManager = layoutManager
         })
+
         return root
     }
+
+    override fun onCategorySelected(item: CategoryModel, view: View) {}
 }
